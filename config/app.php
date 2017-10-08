@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+		Pratik\ToDoEventCalender\TodoEventCalenderServiceProvider::class,
         /*
          * Application Service Providers...
          */
