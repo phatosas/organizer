@@ -1,4 +1,6 @@
 <!doctype html>
+
+
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -9,7 +11,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css"> 
         <!-- Styles -->
         <style>
             html, body {
@@ -49,7 +51,40 @@
             .title {
                 font-size: 84px;
             }
-
+			
+			.column1, .column2, .column3 {
+				width: 31.3%;
+				float: left;
+				margin: 1%;}
+			.column3 {
+				margin-right: 0%;}
+			
+			.page {
+				overflow: auto;
+				margin: 1%;
+				padding: 25px 0;
+				color: #212121;
+				
+				background: #fcf59b;
+				background: 
+					-webkit-gradient(
+						linear,
+						left top, left bottom,
+						from(#81cbbc),
+						color-stop(2%, #fcf59b)
+					);
+				-webkit-background-size: 100% 40px;
+				}
+			
+			
+			p{
+				padding: 0 100px;
+				line-height: 40px;
+				margin-bottom: 40px;
+				font-size: 18px;
+				font-family: 'Great Vibes', cursive;
+			}
+			
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -63,22 +98,6 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-			.column1, .column2, .column3 {
-				width: 31.3%;
-				float: left;
-				margin: 1%;}
-			.column3 {
-				margin-right: 0%;}
-			li {
-				display: inline;
-				padding: 0.5em;}
-			#nav, #footer {
-				background-color: #efefef;
-				padding: 0.5em 0;}
-			#feature, .article {
-				height: 10em;
-				margin-bottom: 1em;
-				background-color: #efefef;}
         </style>
     </head>
     <body>
@@ -103,19 +122,43 @@
                     <a href="{{ url('/calender') }}">Todo</a>
                     <a href="https://laracasts.com">Schedule</a>
                     <a href="https://laravel-news.com">Budget</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-				<div class="article column1">
-					<p>Todo</p>
+				<div class="page column1">
+					<h4>To Do</h4>
+					$result = SELECT * FROM `todo_calender` WHERE 1;
+					@foreach($result as $todo)
+					@if ($todo->DATE(@start_dt) == date('Y-m-d'))
+						<p> $todo->title </p>
+					@endif
+					
+					@endforeach
+					<p>
+						The man came he saw he conquered
+						The man came he saw he conquered
+						The man came he saw he conquered
+						The man came he saw he conquered
+					</p>
 				</div>
-				<div class="article column2">
-					<p>Schedule</p>
+				<div class="page column2">
+					<h4>Shifts</h4>
+					<p>
+						The man came he saw he conquered
+						The man came he saw he conquered
+						The man came he saw he conquered
+						The man came he saw he conquered
+					</p>
 				</div>
-				<div class="article column3">
-					<p>Bills</p>
+				<div class="page column3">
+					<p><b>Bills</b></p>
+					<p>
+						The man came he saw he conquered
+						The man came he saw he conquered
+						The man came he saw he conquered
+						The man came he saw he conquered
+					</p>
 				</div>
+					
             </div>
-			
 
 
     </body>
