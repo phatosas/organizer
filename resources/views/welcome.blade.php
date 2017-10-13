@@ -1,6 +1,5 @@
 <!doctype html>
 
-
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -63,6 +62,7 @@
 				overflow: auto;
 				margin: 1%;
 				padding: 25px 0;
+				height: 232px;
 				color: #212121;
 				
 				background: #fcf59b;
@@ -124,20 +124,12 @@
                     <a href="https://laravel-news.com">Budget</a>
                 </div>
 				<div class="page column1">
-					<h4>To Do</h4>
-					$result = SELECT * FROM `todo_calender` WHERE 1;
-					@foreach($result as $todo)
-					@if ($todo->DATE(@start_dt) == date('Y-m-d'))
-						<p> $todo->title </p>
-					@endif
-					
+					<p><b>To Do</b></p>
+					<p>
+					@foreach($todos as $todo)
+						 {{ $todo->title }}</br>				
 					@endforeach
 					<p>
-						The man came he saw he conquered
-						The man came he saw he conquered
-						The man came he saw he conquered
-						The man came he saw he conquered
-					</p>
 				</div>
 				<div class="page column2">
 					<h4>Shifts</h4>

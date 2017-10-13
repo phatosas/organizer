@@ -4,6 +4,8 @@ namespace Organizer\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Organizer\Todo;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+		$todos = \Organizer\Todo::all();
+        return view('welcome')->with('todos',$todos);
     }
 }
