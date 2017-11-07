@@ -1,6 +1,6 @@
 <?php
 
-namespace Organizer\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +13,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-		$todos = \Organizer\Todo::all();
+		$todos = \App\Todo::all();
         return view('todo.todo')->with('todos',$todos);
     }
 }
