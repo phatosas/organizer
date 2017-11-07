@@ -4,7 +4,7 @@ namespace Organizer\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class TodoController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -13,6 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+		$todos = \Organizer\Todo::all();
+        return view('todo.todo')->with('todos',$todos);
     }
 }

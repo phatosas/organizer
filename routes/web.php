@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/todo', 'TodoController@index');
+
 Auth::routes();
 
 Route::get('/debug', function() {
@@ -52,3 +54,7 @@ Route::get('/debug', function() {
 	echo '</pre>';
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

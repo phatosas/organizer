@@ -1,0 +1,72 @@
+html, body {
+	height: 100vh;
+	margin: 0;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.flex-center {
+	alignitems: center;
+	display: flex;
+	justify-content: center;
+}
+
+.position-ref {
+	position: relative;
+}
+
+.top-right {
+	position: absolute;
+	right: 10px;
+	top: 18px;
+}
+
+.content {
+	text-align: center;
+	overflow: auto;
+}
+
+.title {
+	font-size: 84px;
+}
+.page {
+	width: 700px;
+	margin-top: 40px;
+	margin: auto;
+	padding: 25px 0;
+	height: 405px;
+	color: #212121;
+	
+	background: #fcf59b;
+	background:
+		-webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#81cbbc),
+			color-stop(2%, #fcf59b)
+		);
+	-webkit-background-size: 100% 40px;
+}
+
+p{
+	padding: 0 100px;
+	line-height: 10px;
+	margin-bottom: 23px;
+	font: 500 100px/1.2 'Merienda One', Helvetica, sans-serif;
+	font-size: 100%;
+}
+
+.links > a {
+	padding: 0 25px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.m-b-md {
+	margin-bottom: 30px;
+}
