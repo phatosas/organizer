@@ -18,7 +18,9 @@
 			@foreach($todos as $todo)
 				@if (strtotime($todo->start_dt) >= strtotime("today") && strtotime($todo->start_dt) < strtotime("today 24:00"))
 				<p>
-				 {{ $todo->title }}
+				 {{ $todo->title }} 
+				 {{ date('h:i A \-', strtotime($todo->start_dt)) }}
+				 {{ date( 'h:i A', strtotime($todo->end_dt)) }}
 				</p>
 				@endif
 			@endforeach
